@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: comments
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 8081
+  - name: server
+    port: 8082
     protocol: TCP
-    targetPort: 8081
+    targetPort: 8082
   selector:
     app: comments

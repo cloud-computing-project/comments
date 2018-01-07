@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: comments
+  labels:
+    team: commentsteam
+spec:
+  selector:
+    matchLabels:
+      app: comments
+  endpoints:
+  - port: server

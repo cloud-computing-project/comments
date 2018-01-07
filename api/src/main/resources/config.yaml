@@ -26,6 +26,10 @@ kumuluzee:
   cors-filter:
     servlet:
       allow-origin: "*"
+  metrics:
+    web-instrumentation:
+      - name: comments-endpoint
+        url-pattern: /v1/comments/*
 rest-properties:
   external-services:
     order-service:

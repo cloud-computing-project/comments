@@ -21,7 +21,16 @@ spec:
             value: http://etcd:2379
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
             value: jdbc:postgresql://postgres-comments:5432/comment
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: server
+          initialDelaySeconds: 10
+          periodSeconds: 3
         ports:
         - containerPort: 8082
           name: server
           protocol: TCP
+        resources:
+          limits:
+            cpu: 500m

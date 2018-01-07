@@ -37,17 +37,19 @@ public class DemoResource {
     }
 
     @POST
-    @Path("healthyFalse")
-    public Response setHealthFalse() {
-        restProperties.setHealthy(false);
-        return Response.ok().build();
+    @Path("load")
+    public Response loadOrder(Integer n) {
+
+        for (int i = 1; i <= n; i++) {
+            fibonacci(i);
+        }
+
+        return Response.status(Response.Status.OK).build();
     }
 
-    @POST
-    @Path("healthyTrue")
-    public Response setHealthTrue() {
-        restProperties.setHealthy(true);
-        return Response.ok().build();
+    private long fibonacci(int n) {
+        if (n <= 1) return n;
+        else return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
     @GET

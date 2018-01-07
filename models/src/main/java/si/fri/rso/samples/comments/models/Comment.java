@@ -8,9 +8,11 @@ import java.util.List;
 
 @Entity(name = "comment")
 @NamedQueries(value =
-        {
-                @NamedQuery(name = "Comment.getAll", query = "SELECT c FROM comment c")
-        })
+{
+        @NamedQuery(name = "Comment.getAll", query = "SELECT c FROM comment c"),
+        @NamedQuery(name = "Comment.findByCustomer", query = "SELECT o FROM orders o WHERE o.customerId = " +
+                ":customerId")
+})
 @UuidGenerator(name = "idGenerator")
 public class Comment {
 

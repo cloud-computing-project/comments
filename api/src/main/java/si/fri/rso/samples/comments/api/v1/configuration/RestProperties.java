@@ -8,7 +8,6 @@ import javax.enterprise.context.ApplicationScoped;
 @ConfigBundle("rest-properties")
 @ApplicationScoped
 public class RestProperties {
-    @JsonProperty("healthy")
     private boolean healthy;
 
     public boolean isHealthy() {
