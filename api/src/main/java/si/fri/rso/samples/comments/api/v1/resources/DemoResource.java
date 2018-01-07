@@ -37,14 +37,14 @@ public class DemoResource {
     }
 
     @POST
-    @Path("healthy")
+    @Path("healthyFalse")
     public Response setHealthFalse() {
         restProperties.setHealthy(false);
         return Response.ok().build();
     }
 
     @POST
-    @Path("healthy")
+    @Path("healthyTrue")
     public Response setHealthTrue() {
         restProperties.setHealthy(true);
         return Response.ok().build();
