@@ -36,6 +36,20 @@ public class DemoResource {
         return Response.ok().build();
     }
 
+    @POST
+    @Path("healthy")
+    public Response setHealthFalse() {
+        restProperties.setHealthy(false);
+        return Response.ok().build();
+    }
+
+    @POST
+    @Path("healthy")
+    public Response setHealthTrue() {
+        restProperties.setHealthy(true);
+        return Response.ok().build();
+    }
+
     @GET
     @Path("healthy")
     public Boolean getHealth() {
