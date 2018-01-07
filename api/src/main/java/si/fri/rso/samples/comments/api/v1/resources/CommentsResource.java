@@ -19,7 +19,7 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Log
-public class CommentResource {
+public class CommentsResource {
 
     @Inject
     private CommentsBean commentsBean;
