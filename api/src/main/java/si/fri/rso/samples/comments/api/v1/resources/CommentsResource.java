@@ -5,6 +5,7 @@ import si.fri.rso.samples.comments.models.Comment;
 import si.fri.rso.samples.comments.services.CommentsBean;
 
 import javax.enterprise.context.RequestScoped;
+import org.eclipse.microprofile.metrics.annotation.Metered;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -28,6 +29,7 @@ public class CommentsResource {
     protected UriInfo uriInfo;
 
     @GET
+    @Metered
     public Response getComments() {
 
         List<Comment> comments = commentsBean.getComments(uriInfo);
