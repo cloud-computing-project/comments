@@ -6,8 +6,8 @@ spec:
   type: LoadBalancer
   ports:
   - name: server
-    port: 8082
+    port: 8085
     protocol: TCP
-    targetPort: 8082
+    targetPort: 8085
   selector:
     app: comments

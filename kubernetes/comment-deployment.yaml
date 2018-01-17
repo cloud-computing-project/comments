@@ -28,7 +28,7 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 3
         ports:
-        - containerPort: 8082
+        - containerPort: 8085
           name: server
           protocol: TCP
         resources:

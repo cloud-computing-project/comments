@@ -11,7 +11,7 @@ services:
   comments:
     image: amela/comments
     ports:
-      - 8082:8082
+      - 8085:8085
     environment:
       KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5432/comment
     depends_on:
