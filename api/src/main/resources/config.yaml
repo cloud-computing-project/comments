@@ -33,5 +33,5 @@ kumuluzee:
 rest-properties:
   external-services:
     comment-service:
-      enabled: true
+      enabled: false
   healthy: true
