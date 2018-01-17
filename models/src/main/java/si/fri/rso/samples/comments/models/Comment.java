@@ -10,7 +10,7 @@ import java.util.List;
 @NamedQueries(value =
 {
         @NamedQuery(name = "Comment.getAll", query = "SELECT c FROM comment c"),
-        @NamedQuery(name = "Comment.findByCustomer", query = "SELECT o FROM orders o WHERE o.customerId = " +
+        @NamedQuery(name = "Comment.findByCustomer", query = "SELECT o FROM comment o WHERE o.customerId = " +
                 ":customerId")
 })
 @UuidGenerator(name = "idGenerator")
