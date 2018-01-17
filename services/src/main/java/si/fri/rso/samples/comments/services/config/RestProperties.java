@@ -9,10 +9,10 @@ import javax.enterprise.context.ApplicationScoped;
 @ConfigBundle("rest-properties")
 public class RestProperties {
 
-    @ConfigValue(value = "external-services.order-service.enabled", watch = true)
+    @ConfigValue(value = "external-services.comment-service.enabled", watch = true)
     private boolean commentServiceEnabled;
 
-    public boolean isOrderServiceEnabled() {
+    public boolean isCommentServiceEnabled() {
         return commentServiceEnabled;
     }
 

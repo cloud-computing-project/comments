@@ -32,6 +32,6 @@ kumuluzee:
         url-pattern: /v1/comments/*
 rest-properties:
   external-services:
-    order-service:
+    comment-service:
       enabled: true
   healthy: true
